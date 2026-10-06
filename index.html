@@ -508,7 +508,8 @@ const PAGES=[
  {id:'kuis',label:'Kuis',c:'var(--blue)',bg:'var(--soft-blue)',sym:'★',desc:'10 soal acak. Kejar skor tertinggimu.'}
 ];
 const MATERI=['bulat','lingkaran','ruang','data'];
-$('#tabs').innerHTML=PAGES.map(p=>`<button class="tab" data-go="${p.id}" style="--c:${p.c}">${p.label}</button>`).join('');
+// REMOVE TABS
+// $('#tabs').innerHTML=PAGES.map(p=>`<button class="tab" data-go="${p.id}" style="--c:${p.c}">${p.label}</button>`).join('');
 $('#menu').innerHTML=PAGES.slice(1).map(p=>`<button class="mitem" data-go="${p.id}" data-menu="${p.id}" style="--c:${p.c};--bg:${p.bg}"><span class="sym">${p.sym}</span><span><b>${p.label}</b><small>${p.desc}</small></span><span class="chk" aria-hidden="true">✓</span></button>`).join('');
 $$('[data-pager]').forEach(el=>{
   const id=el.closest('.page').id, i=PAGES.findIndex(p=>p.id===id);
